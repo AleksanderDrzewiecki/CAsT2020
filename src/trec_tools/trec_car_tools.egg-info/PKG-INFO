@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: trec-car-tools
+Version: 2.5.4
+Summary: Support tools for TREC CAR participants. Also see trec-car.cs.unh.edu
+Home-page: https://github.com/TREMA-UNH/trec-car-tools/python3
+Author: laura-dietz
+Author-email: Laura.Dietz@unh.edu
+License: BSD 3-Clause
+Description: UNKNOWN
+Keywords: wikipedia,complex answer retrieval,trec car
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
