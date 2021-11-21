@@ -210,83 +210,92 @@ def run_queries(query_file: str, key: str, CAsT: object, run_id: str) -> None:
     f.close()
 
 
-# Base
-# Reranking FALSE
-ae_cq0_cr0_rrF_base = CAsT(
-    context_queries=0, context_responses=0, reranking=False, index_name="cast_base"
-)
-ae_cq3_cr0_rrF_base = CAsT(
-    context_queries=3, context_responses=0, reranking=False, index_name="cast_base"
-)
-ae_cq0_cr3_rrF_base = CAsT(
-    context_queries=0, context_responses=3, reranking=False, index_name="cast_base"
-)
-ae_cq3_cr3_rrF_base = CAsT(
-    context_queries=3, context_responses=3, reranking=False, index_name="cast_base"
-)
-# Reranking TRUE
-ae_cq0_cr0_rrT_base = CAsT(
-    context_queries=0, context_responses=0, reranking=True, index_name="cast_base"
-)
-ae_cq3_cr0_rrT_base = CAsT(
-    context_queries=3, context_responses=0, reranking=True, index_name="cast_base"
-)
-ae_cq0_cr3_rrT_base = CAsT(
-    context_queries=0, context_responses=3, reranking=True, index_name="cast_base"
-)
-ae_cq3_cr3_rrT_base = CAsT(
-    context_queries=3, context_responses=3, reranking=True, index_name="cast_base"
-)
+if __name__ == "__main__":
 
+    ## Example configurations
+    """
+    # Base
+    # Reranking FALSE
+    ae_cq0_cr0_rrF_base = CAsT(
+        context_queries=0, context_responses=0, reranking=False, index_name="cast_base"
+    )
+    ae_cq3_cr0_rrF_base = CAsT(
+        context_queries=3, context_responses=0, reranking=False, index_name="cast_base"
+    )
+    ae_cq0_cr3_rrF_base = CAsT(
+        context_queries=0, context_responses=3, reranking=False, index_name="cast_base"
+    )
+    ae_cq3_cr3_rrF_base = CAsT(
+        context_queries=3, context_responses=3, reranking=False, index_name="cast_base"
+    )
+    # Reranking TRUE
+    ae_cq0_cr0_rrT_base = CAsT(
+        context_queries=0, context_responses=0, reranking=True, index_name="cast_base"
+    )
+    ae_cq3_cr0_rrT_base = CAsT(
+        context_queries=3, context_responses=0, reranking=True, index_name="cast_base"
+    )
+    ae_cq0_cr3_rrT_base = CAsT(
+        context_queries=0, context_responses=3, reranking=True, index_name="cast_base"
+    )
+    ae_cq3_cr3_rrT_base = CAsT(
+        context_queries=3, context_responses=3, reranking=True, index_name="cast_base"
+    )
 
-# d2q
-# Reranking FALSE
-ae_rc0_qr0_rrF_d2q = CAsT(
-    context_queries=0, context_responses=0, reranking=False, index_name="cast_d2q"
-)
-ae_qc3_qr0_rrF_d2q = CAsT(
-    context_queries=3, context_responses=0, reranking=False, index_name="cast_d2q"
-)
-ae_qc0_qr3_rrF_d2q = CAsT(
-    context_queries=0, context_responses=3, reranking=False, index_name="cast_d2q"
-)
-ae_qc3_qr3_rrF_d2q = CAsT(
-    context_queries=3, context_responses=3, reranking=False, index_name="cast_d2q"
-)
-# Reranking TRUE
-ae_qc0_qr0_rrT_d2q = CAsT(
-    context_queries=0, context_responses=0, reranking=True, index_name="cast_d2q"
-)
-ae_qc3_qr0_rrT_d2q = CAsT(
-    context_queries=3, context_responses=0, reranking=True, index_name="cast_d2q"
-)
-ae_qc0_qr3_rrT_d2q = CAsT(
-    context_queries=0, context_responses=3, reranking=True, index_name="cast_d2q"
-)
-ae_qc3_qr3_rrT_d2q = CAsT(
-    context_queries=3, context_responses=3, reranking=True, index_name="cast_d2q"
-)
+    # d2q
+    # Reranking FALSE
+    ae_rc0_qr0_rrF_d2q = CAsT(
+        context_queries=0, context_responses=0, reranking=False, index_name="cast_d2q"
+    )
+    ae_qc3_qr0_rrF_d2q = CAsT(
+        context_queries=3, context_responses=0, reranking=False, index_name="cast_d2q"
+    )
+    ae_qc0_qr3_rrF_d2q = CAsT(
+        context_queries=0, context_responses=3, reranking=False, index_name="cast_d2q"
+    )
+    ae_qc3_qr3_rrF_d2q = CAsT(
+        context_queries=3, context_responses=3, reranking=False, index_name="cast_d2q"
+    )
+    # Reranking TRUE
+    ae_qc0_qr0_rrT_d2q = CAsT(
+        context_queries=0, context_responses=0, reranking=True, index_name="cast_d2q"
+    )
+    ae_qc3_qr0_rrT_d2q = CAsT(
+        context_queries=3, context_responses=0, reranking=True, index_name="cast_d2q"
+    )
+    ae_qc0_qr3_rrT_d2q = CAsT(
+        context_queries=0, context_responses=3, reranking=True, index_name="cast_d2q"
+    )
+    ae_qc3_qr3_rrT_d2q = CAsT(
+        context_queries=3, context_responses=3, reranking=True, index_name="cast_d2q"
+    )
 
-# STOPWORD REMOVAL
-ae_cq7_cr0_rrF_rsT_base = CAsT(
-    context_queries=7,
-    context_responses=0,
-    remove_stopwords=True,
-    reranking=False,
-    index_name="cast_base",
-)
+    # STOPWORD REMOVAL
+    ae_cq7_cr0_rrF_rsT_base = CAsT(
+        context_queries=7,
+        context_responses=0,
+        remove_stopwords=True,
+        reranking=False,
+        index_name="cast_base",
+    )
 
-# PREV_QUERY
-ae_cq7_cr0_rrF_rsF_pq1_base = CAsT(
-    context_queries=7,
-    context_responses=0,
-    prev_query=1,
-    remove_stopwords=False,
-    reranking=False,
-    index_name="cast_base",
-)
+    # PREV_QUERY
+    ae_cq7_cr0_rrF_rsF_pq1_base = CAsT(
+        context_queries=7,
+        context_responses=0,
+        prev_query=1,
+        remove_stopwords=False,
+        reranking=False,
+        index_name="cast_base",
+    )
+    """
 
+    # Base
+    # Reranking FALSE
+    ae_cq0_cr0_rrF_base = CAsT(
+        context_queries=0, context_responses=0, reranking=False, index_name="cast_base"
+    )
 
-path = "../eval/2020_automatic_evaluation_topics_v1.0.json"
-key = "raw_utterance"
-run_queries(path, key=key, CAsT=ae_cq0_cr0_rrF_base, run_id="ae_cq0_cr0_rrF_base")
+    path = "../eval/2020_automatic_evaluation_topics_v1.0.json"
+    key = "raw_utterance"
+    run_queries(path, key=key, CAsT=ae_cq0_cr0_rrF_base, run_id="ae_cq0_cr0_rrF_base")
